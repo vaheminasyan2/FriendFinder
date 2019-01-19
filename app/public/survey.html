@@ -31,22 +31,22 @@
             <h3>About You</h3>
             <div class="form-group">
                 <label>Name (Required)</label>
-                <input type="text" class="form-control" id="name">
+                <input type="text" class="form-control" id="name" required="">
             </div>
             <div class="form-group">
                 <label>Link to Photo Image (Required)</label>
-                <input type="text" class="form-control" id="photo">
+                <input type="text" class="form-control" id="photo" required="">
             </div>
             <hr>
 
             <div>
                 <h4>Question 1</h4>
                 <p>Your mind is always buzzing with unexplored ideas and plans.</p>
-                <form id="question1">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="1">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -61,11 +61,11 @@
             <div>
                 <h4>Question 2</h4>
                 <p>Generally speaking, you rely more on your experience than your imagination.</p>
-                <form id="question2">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="2">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -80,11 +80,11 @@
             <div>
                 <h4>Question 3</h4>
                 <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
-                <form id="question3">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="3">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -99,11 +99,11 @@
             <div>
                 <h4>Question 4</h4>
                 <p>You rarely do something just out of sheer curiosity.</p>
-                <form id="question4">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="4">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -118,11 +118,11 @@
             <div>
                 <h4>Question 5</h4>
                 <p>People can rarely upset you.</p>
-                <form id="question5">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="5">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -137,11 +137,11 @@
             <div>
                 <h4>Question 6</h4>
                 <p>It is often difficult for you to relate to other people’s feelings.</p>
-                <form id="question6">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="6">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -156,11 +156,11 @@
             <div>
                 <h4>Question 7</h4>
                 <p>In a discussion, truth should be more important than people’s sensitivities.</p>
-                <form id="question7">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="7">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -176,11 +176,11 @@
                 <h4>Question 8</h4>
                 <p>You rarely get carried away by fantasies and ideas.
                 </p>
-                <form id="question8">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="8">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -196,11 +196,11 @@
                 <h4>Question 9</h4>
                 <p>You think that everyone’s views should be respected regardless of whether they are supported by
                     facts or not.</p>
-                <form id="question9">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="9">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -215,11 +215,11 @@
             <div>
                 <h4>Question 10</h4>
                 <p>You feel more energetic after spending time with a group of people.</p>
-                <form id="question10">
+                <form name="question">
                     <div class="form-row align-items-center">
                         <div class="col-auto my-1">
-                            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                <option selected>Choose...</option>
+                            <select class="custom-select mr-sm-2" name="10">
+                                <option selected value="0">Choose...</option>
                                 <option value="1">1 (Strongly Disagree)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -231,7 +231,7 @@
                 </form>
             </div>
             <br><br>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-btn">Submit</button>
         </form>
         <br><br>
         <footer class="footer">
@@ -243,5 +243,64 @@
     </div>
 
 </body>
+
+<script>
+
+    // Create variable object for user
+    var user = {
+        name: "",
+        photo: "",
+        scores: []
+    };
+
+    // Validate form
+    function validate() {
+        var isValid = true;
+        $(".form-control").each(function () {
+            if ($(this).val() === "") {
+                isValid = false;
+            }
+        });
+
+        $(".custom-select").each(function () {
+            if ($(this).val() === "0") {
+                isValid = false;
+            }
+        });
+        return isValid;
+    };
+
+    // If validate is passed this function grabs user's input and passes it to the friendArray
+    function submit() {
+        $("#submit-btn").on("click", function (event) {
+            event.preventDefault();
+            var name = $("#name").val();
+            var photo = $("#photo").val();
+            var scores = [];
+            var rawScores = $("form").serializeArray();
+            $.each(rawScores, function (i, score) {
+                scores.push(score.value);
+            });
+
+            if (validate()) {
+                user.name = name;
+                user.photo = photo;
+                user.scores = scores;
+
+                $.post("/api/friends", user, function (data) {
+ 
+                })
+            }
+            else {
+                alert("Please fill out all fields before submitting!")
+            }
+        });
+        
+    }
+
+    submit();
+
+</script>
+
 
 </html>
