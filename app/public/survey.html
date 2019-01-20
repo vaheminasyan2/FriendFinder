@@ -18,7 +18,6 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
         crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../../server.js"></script>
     <title>Survey</title>
 </head>
 
@@ -233,7 +232,9 @@
             <br><br>
             <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-btn">Submit</button>
         </form>
+
         <br><br>
+
         <footer class="footer">
             <div class="container">
                 <p><a href="/api/friends">API Friend List</a> | <a href="https://github.com/vaheminasyan2/FriendFinder">GitHub
@@ -242,65 +243,84 @@
         </footer>
     </div>
 
-</body>
+    <div id="results-modal" class="modal fade" role="dialog" style="display: none;">
+        <div class="modal-dialog">
 
-<script>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name">c</h2>
+                    <img class="" id="match-img" src="c" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    // Create variable object for user
-    var user = {
-        name: "",
-        photo: "",
-        scores: []
-    };
+    <script>
 
-    // Validate form
-    function validate() {
-        var isValid = true;
-        $(".form-control").each(function () {
-            if ($(this).val() === "") {
-                isValid = false;
-            }
-        });
+        // Create variable object for user
+        var user = {
+            name: "",
+            photo: "",
+            scores: []
+        };
 
-        $(".custom-select").each(function () {
-            if ($(this).val() === "0") {
-                isValid = false;
-            }
-        });
-        return isValid;
-    };
+        // Validate form
+        function validate() {
+            var isValid = true;
+            $(".form-control").each(function () {
+                if ($(this).val() === "") {
+                    isValid = false;
+                }
+            });
 
-    // If validate is passed this function grabs user's input and passes it to the friendArray
-    function submit() {
+            $(".custom-select").each(function () {
+                if ($(this).val() === "0") {
+                    isValid = false;
+                }
+            });
+            return isValid;
+        };
+
+        // On click function to grab user's input 
         $("#submit-btn").on("click", function (event) {
             event.preventDefault();
             var name = $("#name").val();
             var photo = $("#photo").val();
             var scores = [];
+
+            // Use serializeArray to loop through form and store user's survey result in the scores array
             var rawScores = $("form").serializeArray();
             $.each(rawScores, function (i, score) {
+                //scores.push(score.value);
                 scores.push(score.value);
             });
 
+            // If validate is passed then pass user's input to the friendArray in the server else ask to complete the form 
             if (validate()) {
                 user.name = name;
                 user.photo = photo;
                 user.scores = scores;
 
                 $.post("/api/friends", user, function (data) {
- 
-                })
+                    $("#match-name").text(data.name);
+                    $("#match-img").attr("src", data.photo);
+                    $("#results-modal").modal("toggle");
+                });
             }
             else {
                 alert("Please fill out all fields before submitting!")
             }
         });
-        
-    }
 
-    submit();
+    </script>
 
-</script>
-
+</body>
 
 </html>
