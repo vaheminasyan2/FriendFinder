@@ -1,7 +1,7 @@
 // This array will hold all our friends data. Adding intial dummy data
 var friendArray = [
     {
-      name: "John",
+      name: "Peter",
       photo: "https://picsum.photos/200",
       scores: [
           "3",
