@@ -5,7 +5,7 @@
 
 "FriendFinder" is a full-stack compatibility-based application. It takes in results from users' surveys, then compares their answers with those from other users. The app then displays the name and picture of the user with the best overall match.
 
-We use Express to setup routing and deployed app to [Heroku](https://nameless-river-63958.herokuapp.com)
+We use Express to setup routing and deployed app to Heroku. [**Try it out here**](https://nameless-river-63958.herokuapp.com).
 
 
 ### How App is Structured
