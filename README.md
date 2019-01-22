@@ -7,6 +7,15 @@
 
 We use Express to setup routing and deployed app to Heroku. [**Try it out here**](https://nameless-river-63958.herokuapp.com).
 
+**Home Page**
+![homepage](images/homepage.PNG)
+
+**Survey Page**
+![survey](images/surveypage.PNG)
+
+**Result Page**
+![result](images/resultpage.PNG)
+
 
 ### How App is Structured
  
