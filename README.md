@@ -16,6 +16,14 @@ We use Express to setup routing and deployed app to Heroku. [**Try it out here**
 **Result Page**
 ![result](images/resultpage.PNG)
 
+### Technology used:
+* Node.js
+* Express, 
+* jQuery
+* Bootstrap
+* HTML
+* CSS
+* Heroku.
 
 ### How App is Structured
  
