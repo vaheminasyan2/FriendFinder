@@ -18,7 +18,7 @@ We use Express to setup routing and deployed app to Heroku. [**Try it out here**
 
 ### Technology used:
 * Node.js
-* Express, 
+* Express
 * jQuery
 * Bootstrap
 * HTML
